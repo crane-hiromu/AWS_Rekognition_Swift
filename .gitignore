@@ -81,11 +81,6 @@ fastlane/test_output
 # Ignore bundler gems.
 vendor/bundle
 
-# Ignore build plist
-delish/Settings.bundle/com.mono0926.LicensePlist
-delish/Settings.bundle/com.mono0926.LicensePlist.latest_result.txt
-delish/Settings.bundle/com.mono0926.LicensePlist.plist
-
 # direnv
 .envrc
 
