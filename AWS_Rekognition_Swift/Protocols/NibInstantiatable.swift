@@ -2,7 +2,7 @@
 //  NibInstantiatable.swift
 //  AWS_Rekognition_Swift
 //
-//  Created by admin on 2020/03/07.
+//  Created by h.crane on 2020/03/07.
 //  Copyright © 2020 h.crane. All rights reserved.
 //
 
