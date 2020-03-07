@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wFz-FK-IVL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Judgment View Controller-->
+        <scene sceneID="w2o-Pc-h98">
+            <objects>
+                <viewController storyboardIdentifier="JudgmentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wFz-FK-IVL" customClass="JudgmentViewController" customModule="AWS_Rekognition_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rkc-Tb-bz5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5oJ-gU-GwH">
+                                <rect key="frame" x="16" y="383" width="382" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g3O-Ce-WZo">
+                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="130"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald_0" translatesAutoresizingMaskIntoConstraints="NO" id="wZe-gx-p7b">
+                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="jbQ-60-sha"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlZ-eG-biM">
+                                                <rect key="frame" x="42.5" y="100" width="32" height="30"/>
+                                                <state key="normal" title="exec"/>
+                                                <connections>
+                                                    <action selector="didTapLeft:" destination="wFz-FK-IVL" eventType="touchUpInside" id="qb4-FP-Rut"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y8q-6r-Vu4">
+                                        <rect key="frame" x="132.5" y="0.0" width="117" height="130"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald_1" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-jR-fPn">
+                                                <rect key="frame" x="0.0" y="0.0" width="117" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="7kq-HO-w3G"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUn-Xq-Erx">
+                                                <rect key="frame" x="42.5" y="100" width="32" height="30"/>
+                                                <state key="normal" title="exec"/>
+                                                <connections>
+                                                    <action selector="didTapCenter:" destination="wFz-FK-IVL" eventType="touchUpInside" id="nu2-vF-kPG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-F2-Upb">
+                                        <rect key="frame" x="265.5" y="0.0" width="116.5" height="130"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald_2" translatesAutoresizingMaskIntoConstraints="NO" id="kDF-7b-Xa2">
+                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="iza-fo-2tk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-fy-o8u">
+                                                <rect key="frame" x="42" y="100" width="32" height="30"/>
+                                                <state key="normal" title="exec"/>
+                                                <connections>
+                                                    <action selector="didTapRight:" destination="wFz-FK-IVL" eventType="touchUpInside" id="BoA-AJ-mUE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5oJ-gU-GwH" firstAttribute="leading" secondItem="TIy-Gd-DF7" secondAttribute="leading" constant="16" id="Cja-38-h1D"/>
+                            <constraint firstItem="TIy-Gd-DF7" firstAttribute="trailing" secondItem="5oJ-gU-GwH" secondAttribute="trailing" constant="16" id="FVD-dR-2pS"/>
+                            <constraint firstItem="5oJ-gU-GwH" firstAttribute="centerY" secondItem="Rkc-Tb-bz5" secondAttribute="centerY" id="tYC-ee-g9H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TIy-Gd-DF7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JmF-cD-2Hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="donald_0" width="619" height="413"/>
+        <image name="donald_1" width="1000" height="722"/>
+        <image name="donald_2" width="512" height="340"/>
+    </resources>
+</document>
