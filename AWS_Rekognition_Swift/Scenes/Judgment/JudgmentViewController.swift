@@ -15,16 +15,27 @@ final class JudgmentViewController: UIViewController {
     
     // MARK: IBActions
     
-    @IBAction private func didTapLeft(_ sender: UIButton) {
-        judge(with: #imageLiteral(resourceName: "donald_0"))
+    @IBAction private func didRecognizeLeft(_ sender: UIButton) {
+        recognizeCelebrities(with: #imageLiteral(resourceName: "donald_0"))
     }
-    @IBAction private func didTapCenter(_ sender: UIButton) {
-        judge(with: #imageLiteral(resourceName: "donald_1"))
+    @IBAction private func didRecognizeCenter(_ sender: UIButton) {
+        recognizeCelebrities(with: #imageLiteral(resourceName: "donald_1"))
     }
-    @IBAction private func didTapRight(_ sender: UIButton) {
-        judge(with: #imageLiteral(resourceName: "donald_2"))
+    @IBAction private func didRecognizeRight(_ sender: UIButton) {
+        recognizeCelebrities(with: #imageLiteral(resourceName: "donald_2"))
     }
     
+    @IBAction private func didDetectLeft(_ sender: UIButton) {
+        detectFaces(with: #imageLiteral(resourceName: "donald_0"))
+    }
+    @IBAction private func didDetectCenter(_ sender: UIButton) {
+        detectFaces(with: #imageLiteral(resourceName: "donald_1"))
+    }
+    @IBAction private func didDetectRight(_ sender: UIButton) {
+        detectFaces(with: #imageLiteral(resourceName: "donald_2"))
+    }
+    
+    @IBOutlet private weak var logTextView: UITextView!
     
     // MARK: Propeties
     
@@ -35,32 +46,58 @@ final class JudgmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         debugPrint(#function)
     }
     
     
     // MARK: Methods
     
-    private func judge(with image: UIImage) {
-        rekognitionObject = AWSRekognition.default()
-        
-        let rekognitionImage = AWSRekognitionImage()
-        rekognitionImage?.bytes = image.jpegData(compressionQuality: 0.5)
-        
+    private func recognizeCelebrities(with image: UIImage) {
         let rekognitionRequest = AWSRekognitionRecognizeCelebritiesRequest()
-        rekognitionRequest?.image = rekognitionImage
+        rekognitionRequest?.image = image.convertJpegToAWSImage
         
         guard let request = rekognitionRequest else { return }
         
-        rekognitionObject?.recognizeCelebrities(request) { result, error in
-            if let r = result {
+        rekognitionObject = AWSRekognition.default()
+        rekognitionObject?.recognizeCelebrities(request) { [weak self] response, error in
+            if let r = response {
                 debugPrint("----success----", r)
-            
+                self?.log(text: "\(r)")
             } else if let e = error {
                 debugPrint("----failure----", e)
-            
+                self?.log(text: e.localizedDescription)
             }
+        }
+    }
+    
+    private func detectFaces(with image: UIImage) {
+        let facesRequest = AWSRekognitionDetectFacesRequest()
+        facesRequest?.image = image.convertJpegToAWSImage
+        
+        guard let frequest = facesRequest else { return }
+        
+        rekognitionObject = AWSRekognition.default()
+        rekognitionObject?.detectFaces(frequest) { [weak self] response, error in
+            if let r = response {
+                debugPrint("----success----", r)
+                self?.log(text: "\(r)")
+            } else if let e = error {
+                debugPrint("----failure----", e)
+                self?.log(text: e.localizedDescription)
+            }
+        }
+    }
+    
+    private func log(text: String) {
+        var str = text
+        str = str.trimmingCharacters(in: .whitespacesAndNewlines)
+        str = str.components(separatedBy: "\\n").joined()
+        str = str.components(separatedBy: "\\").joined()
+        str = str.components(separatedBy: ";").joined()
+        
+        DispatchQueue.main.async {
+            self.logTextView.text = str
         }
     }
 }
@@ -68,3 +105,21 @@ final class JudgmentViewController: UIViewController {
 // MARK: - StoryboardInstantiatable
 
 extension JudgmentViewController: StoryboardInstantiatable {}
+
+
+// MARK: - Private
+
+extension UIImage {
+
+    var convertJpegToAWSImage: AWSRekognitionImage? {
+        let rekognitionImage = AWSRekognitionImage()
+        rekognitionImage?.bytes = self.jpegData(compressionQuality: 0.5)
+        return rekognitionImage
+    }
+    
+    var convertPngToAWSImage: AWSRekognitionImage? {
+        let rekognitionImage = AWSRekognitionImage()
+        rekognitionImage?.bytes = self.pngData()
+        return rekognitionImage
+    }
+}

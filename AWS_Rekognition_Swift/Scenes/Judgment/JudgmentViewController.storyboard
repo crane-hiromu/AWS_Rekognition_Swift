@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5oJ-gU-GwH">
-                                <rect key="frame" x="16" y="383" width="382" height="130"/>
+                                <rect key="frame" x="16" y="76" width="382" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g3O-Ce-WZo">
-                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="116.5" height="160"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald_0" translatesAutoresizingMaskIntoConstraints="NO" id="wZe-gx-p7b">
                                                 <rect key="frame" x="0.0" y="0.0" width="116.5" height="100"/>
@@ -28,16 +28,23 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlZ-eG-biM">
-                                                <rect key="frame" x="42.5" y="100" width="32" height="30"/>
-                                                <state key="normal" title="exec"/>
+                                                <rect key="frame" x="24.5" y="100" width="68" height="30"/>
+                                                <state key="normal" title="recognize"/>
                                                 <connections>
-                                                    <action selector="didTapLeft:" destination="wFz-FK-IVL" eventType="touchUpInside" id="qb4-FP-Rut"/>
+                                                    <action selector="didRecognizeLeft:" destination="wFz-FK-IVL" eventType="touchUpInside" id="FCy-mg-OWW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcZ-bZ-bf3">
+                                                <rect key="frame" x="16" y="130" width="85" height="30"/>
+                                                <state key="normal" title="detectFaces"/>
+                                                <connections>
+                                                    <action selector="didDetectLeft:" destination="wFz-FK-IVL" eventType="touchUpInside" id="m4a-p5-H8L"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y8q-6r-Vu4">
-                                        <rect key="frame" x="132.5" y="0.0" width="117" height="130"/>
+                                        <rect key="frame" x="132.5" y="0.0" width="117" height="160"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald_1" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-jR-fPn">
                                                 <rect key="frame" x="0.0" y="0.0" width="117" height="100"/>
@@ -46,16 +53,23 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUn-Xq-Erx">
-                                                <rect key="frame" x="42.5" y="100" width="32" height="30"/>
-                                                <state key="normal" title="exec"/>
+                                                <rect key="frame" x="24.5" y="100" width="68" height="30"/>
+                                                <state key="normal" title="recognize"/>
                                                 <connections>
-                                                    <action selector="didTapCenter:" destination="wFz-FK-IVL" eventType="touchUpInside" id="nu2-vF-kPG"/>
+                                                    <action selector="didRecognizeCenter:" destination="wFz-FK-IVL" eventType="touchUpInside" id="LxR-Nl-eTO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGO-Us-gc3">
+                                                <rect key="frame" x="16" y="130" width="85" height="30"/>
+                                                <state key="normal" title="detectFaces"/>
+                                                <connections>
+                                                    <action selector="didDetectCenter:" destination="wFz-FK-IVL" eventType="touchUpInside" id="wfX-75-9Xp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-F2-Upb">
-                                        <rect key="frame" x="265.5" y="0.0" width="116.5" height="130"/>
+                                        <rect key="frame" x="265.5" y="0.0" width="116.5" height="160"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="donald_2" translatesAutoresizingMaskIntoConstraints="NO" id="kDF-7b-Xa2">
                                                 <rect key="frame" x="0.0" y="0.0" width="116.5" height="100"/>
@@ -64,25 +78,46 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxP-fy-o8u">
-                                                <rect key="frame" x="42" y="100" width="32" height="30"/>
-                                                <state key="normal" title="exec"/>
+                                                <rect key="frame" x="24" y="100" width="68" height="30"/>
+                                                <state key="normal" title="recognize"/>
                                                 <connections>
-                                                    <action selector="didTapRight:" destination="wFz-FK-IVL" eventType="touchUpInside" id="BoA-AJ-mUE"/>
+                                                    <action selector="didRecognizeRight:" destination="wFz-FK-IVL" eventType="touchUpInside" id="zq9-Ae-38S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPv-2E-vES">
+                                                <rect key="frame" x="15.5" y="130" width="85" height="30"/>
+                                                <state key="normal" title="detectFaces"/>
+                                                <connections>
+                                                    <action selector="didDetectRight:" destination="wFz-FK-IVL" eventType="touchUpInside" id="zgF-Ar-fkP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="log" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJM-7S-Ipc">
+                                <rect key="frame" x="16" y="252" width="382" height="594"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sJM-7S-Ipc" firstAttribute="top" secondItem="5oJ-gU-GwH" secondAttribute="bottom" constant="16" id="BlN-mb-89L"/>
                             <constraint firstItem="5oJ-gU-GwH" firstAttribute="leading" secondItem="TIy-Gd-DF7" secondAttribute="leading" constant="16" id="Cja-38-h1D"/>
                             <constraint firstItem="TIy-Gd-DF7" firstAttribute="trailing" secondItem="5oJ-gU-GwH" secondAttribute="trailing" constant="16" id="FVD-dR-2pS"/>
-                            <constraint firstItem="5oJ-gU-GwH" firstAttribute="centerY" secondItem="Rkc-Tb-bz5" secondAttribute="centerY" id="tYC-ee-g9H"/>
+                            <constraint firstItem="TIy-Gd-DF7" firstAttribute="bottom" secondItem="sJM-7S-Ipc" secondAttribute="bottom" constant="16" id="WK1-iN-2uG"/>
+                            <constraint firstItem="sJM-7S-Ipc" firstAttribute="trailing" secondItem="5oJ-gU-GwH" secondAttribute="trailing" id="YfE-8r-61s"/>
+                            <constraint firstItem="sJM-7S-Ipc" firstAttribute="leading" secondItem="5oJ-gU-GwH" secondAttribute="leading" id="aWZ-c6-na3"/>
+                            <constraint firstItem="5oJ-gU-GwH" firstAttribute="top" secondItem="TIy-Gd-DF7" secondAttribute="top" constant="32" id="gos-Ud-IgG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TIy-Gd-DF7"/>
                     </view>
+                    <connections>
+                        <outlet property="logTextView" destination="sJM-7S-Ipc" id="mBN-vm-tIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmF-cD-2Hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
