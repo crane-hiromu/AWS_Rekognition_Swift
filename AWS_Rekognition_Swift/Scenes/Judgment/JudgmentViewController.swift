@@ -49,11 +49,15 @@ final class JudgmentViewController: UIViewController {
         
         debugPrint(#function)
     }
+}
+
+// MARK: - Private
+
+private extension JudgmentViewController {
     
-    
-    // MARK: Methods
-    
-    private func recognizeCelebrities(with image: UIImage) {
+    func recognizeCelebrities(with image: UIImage) {
+        logTextView.text = "wait for response..."
+        
         let rekognitionRequest = AWSRekognitionRecognizeCelebritiesRequest()
         rekognitionRequest?.image = image.convertJpegToAWSImage
         
@@ -71,7 +75,9 @@ final class JudgmentViewController: UIViewController {
         }
     }
     
-    private func detectFaces(with image: UIImage) {
+    func detectFaces(with image: UIImage) {
+        logTextView.text = "wait for response..."
+        
         let facesRequest = AWSRekognitionDetectFacesRequest()
         facesRequest?.image = image.convertJpegToAWSImage
         
@@ -89,7 +95,7 @@ final class JudgmentViewController: UIViewController {
         }
     }
     
-    private func log(text: String) {
+    func log(text: String) {
         var str = text
         str = str.trimmingCharacters(in: .whitespacesAndNewlines)
         str = str.components(separatedBy: "\\n").joined()

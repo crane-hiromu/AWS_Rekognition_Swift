@@ -15,28 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="06e-BV-77t">
-                                <rect key="frame" x="186" y="353" width="42" height="190"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="06e-BV-77t">
+                                <rect key="frame" x="158.5" y="393" width="97" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U03-V7-ccU">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
-                                        <state key="normal" title="Image"/>
+                                        <rect key="frame" x="9.5" y="0.0" width="78" height="30"/>
+                                        <state key="normal" title="AWS Demo"/>
                                         <connections>
                                             <action selector="showJudgment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Su9-dW-bQF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxk-7q-LNh">
-                                        <rect key="frame" x="0.0" y="80" width="41" height="30"/>
-                                        <state key="normal" title="Photo"/>
+                                        <rect key="frame" x="0.0" y="80" width="97" height="30"/>
+                                        <state key="normal" title="Amplify Demo"/>
                                         <connections>
                                             <action selector="showPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wKh-3f-jpd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-cS-B1u">
-                                        <rect key="frame" x="0.0" y="160" width="40" height="30"/>
-                                        <state key="normal" title="Video"/>
-                                        <connections>
-                                            <action selector="showVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fL9-pb-rlL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -52,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

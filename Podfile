@@ -5,7 +5,12 @@ target 'AWS_Rekognition_Swift' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'AWSRekognition'
+  pod 'AWSRekognition', '~> 2.12.2'
+
+  pod 'Amplify'
+  pod 'AWSPluginsCore'
+  pod 'AWSPredictionsPlugin'
+  pod 'AWSMobileClient', '~> 2.12.2'
 
   # Pods for AWS_Rekognition_Swift
 

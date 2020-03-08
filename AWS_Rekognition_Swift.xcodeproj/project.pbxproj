@@ -159,8 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				84B313AC2413993500E6BB8F /* Judgment */,
-				84B313B124139EF400E6BB8F /* Photo */,
-				84B313B224139EFB00E6BB8F /* Video */,
 				843843A52412A064005570EC /* MainViewController.swift */,
 				843843A72412A064005570EC /* Main.storyboard */,
 			);
@@ -174,20 +172,6 @@
 				84B313AF24139A4400E6BB8F /* JudgmentViewController.storyboard */,
 			);
 			path = Judgment;
-			sourceTree = "<group>";
-		};
-		84B313B124139EF400E6BB8F /* Photo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Photo;
-			sourceTree = "<group>";
-		};
-		84B313B224139EFB00E6BB8F /* Video */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Video;
 			sourceTree = "<group>";
 		};
 		84B313B324139FA400E6BB8F /* Protocols */ = {
