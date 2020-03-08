@@ -9,6 +9,7 @@
 import UIKit
 import AWSCore
 import Amplify
+import AWSMobileClient
 import AWSPredictionsPlugin
 
 @UIApplicationMain
@@ -18,14 +19,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         /// pattern1
-        let apiPlugin = AWSPredictionsPlugin()
-        do {
-            try Amplify.add(plugin: apiPlugin)
-            try Amplify.configure()
-            print("Amplify initialized")
-        } catch {
-            print("Failed to configure Amplify \(error)")
-        }
+        let predictionsPlugin = AWSPredictionsPlugin()
+        try! Amplify.add(plugin: predictionsPlugin)
+        try! Amplify.configure()
         ///
         
         

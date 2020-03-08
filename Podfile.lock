@@ -1,5 +1,23 @@
 PODS:
   - Amplify (0.10.0)
+  - AmplifyPlugins (0.10.0):
+    - AmplifyPlugins/AWSAPIPlugin (= 0.10.0)
+    - AmplifyPlugins/AWSDataStorePlugin (= 0.10.0)
+    - AmplifyPlugins/AWSPinpointAnalyticsPlugin (= 0.10.0)
+    - AmplifyPlugins/AWSS3StoragePlugin (= 0.10.0)
+  - AmplifyPlugins/AWSAPIPlugin (0.10.0):
+    - AWSPluginsCore (= 0.10.0)
+    - ReachabilitySwift (~> 5.0.0)
+    - Starscream (~> 3.0.2)
+  - AmplifyPlugins/AWSDataStorePlugin (0.10.0):
+    - AWSPluginsCore (= 0.10.0)
+    - SQLite.swift (~> 0.12.0)
+  - AmplifyPlugins/AWSPinpointAnalyticsPlugin (0.10.0):
+    - AWSPinpoint (~> 2.12.2)
+    - AWSPluginsCore (= 0.10.0)
+  - AmplifyPlugins/AWSS3StoragePlugin (0.10.0):
+    - AWSPluginsCore (= 0.10.0)
+    - AWSS3 (~> 2.12.2)
   - AWSAuthCore (2.12.7):
     - AWSCore (= 2.12.7)
   - AWSCognitoIdentityProvider (2.12.7):
@@ -12,6 +30,8 @@ PODS:
   - AWSMobileClient (2.12.7):
     - AWSAuthCore (= 2.12.7)
     - AWSCognitoIdentityProvider (= 2.12.7)
+  - AWSPinpoint (2.12.7):
+    - AWSCore (= 2.12.7)
   - AWSPluginsCore (0.10.0):
     - Amplify (= 0.10.0)
     - AWSMobileClient (~> 2.12.2)
@@ -28,6 +48,8 @@ PODS:
     - CoreMLPredictionsPlugin (= 0.10.0)
   - AWSRekognition (2.12.7):
     - AWSCore (= 2.12.7)
+  - AWSS3 (2.12.7):
+    - AWSCore (= 2.12.7)
   - AWSTextract (2.12.7):
     - AWSCore (= 2.12.7)
   - AWSTranscribe (2.12.7):
@@ -36,49 +58,68 @@ PODS:
     - AWSCore (= 2.12.7)
   - CoreMLPredictionsPlugin (0.10.0):
     - Amplify (= 0.10.0)
+  - ReachabilitySwift (5.0.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - Starscream (3.0.6)
 
 DEPENDENCIES:
   - Amplify
+  - AmplifyPlugins
   - AWSMobileClient (~> 2.12.2)
   - AWSPluginsCore
   - AWSPredictionsPlugin
   - AWSRekognition (~> 2.12.2)
+  - CoreMLPredictionsPlugin
 
 SPEC REPOS:
   trunk:
     - Amplify
+    - AmplifyPlugins
     - AWSAuthCore
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSComprehend
     - AWSCore
     - AWSMobileClient
+    - AWSPinpoint
     - AWSPluginsCore
     - AWSPolly
     - AWSPredictionsPlugin
     - AWSRekognition
+    - AWSS3
     - AWSTextract
     - AWSTranscribe
     - AWSTranslate
     - CoreMLPredictionsPlugin
+    - ReachabilitySwift
+    - SQLite.swift
+    - Starscream
 
 SPEC CHECKSUMS:
   Amplify: 786ae0a91656086c74de41c8821a869095fa6a6d
+  AmplifyPlugins: 5531c6c13242f40a8c057aad64cb3b915559b65e
   AWSAuthCore: 288cb737a35ff031fbf42edaa8d0062328791d4e
   AWSCognitoIdentityProvider: 4998bdbfbafe5038dae0237a598580e102e7b6b5
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSComprehend: 688ac15f8832da88aebeabcfcd723c66dc9c38be
   AWSCore: 2f0f88ae94a63a198274d683c7d0e18709d7090b
   AWSMobileClient: bf1fb0868f9187141ca7b69220383c14878c0a29
+  AWSPinpoint: 8a7b997b44a225f4d0589f2d40ff21f7816d7c29
   AWSPluginsCore: 7d7f8cd3fc5664b1eeb67b1a9aa312f78cf09cb9
   AWSPolly: 4b16ec4ac218c127268206a44fbe776efb335665
   AWSPredictionsPlugin: bc5b746eaeac4fafb5a4432dc8d137ab65dbdf10
   AWSRekognition: d6cc7c73ba6851bcaf32b192f18371d4407572d7
+  AWSS3: 40d2f99d91e34999789a534d95c80cc7c1135c6d
   AWSTextract: 8fe19f0e83a3d91f21452c3f9878abdc5bf77ab9
   AWSTranscribe: 99ac09d7677a467762c51561e50df48969803c82
   AWSTranslate: 3db9c870258c14121bd9b41c490d1985f31af7c2
   CoreMLPredictionsPlugin: 11f49f40403f03623c24f086927a55536753faee
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 33ec51aea149df8057d9b887eb0ee1e59cce7b9f
+PODFILE CHECKSUM: 8b71d0b162650da51b80fc957c55de8ba4fb01db
 
 COCOAPODS: 1.8.4

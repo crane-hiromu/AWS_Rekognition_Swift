@@ -16,14 +16,13 @@ final class MainViewController: UIViewController {
     
     @IBAction private func showJudgment(_ sender: UIButton) {
         let vc = JudgmentViewController.instantiate()
+        vc.isAmplify = false
         present(vc, animated: true)
     }
     
-    @IBAction private func showPhoto(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction private func showVideo(_ sender: UIButton) {
-        
+    @IBAction private func showJudgmentForAmplify(_ sender: UIButton) {
+        let vc = JudgmentViewController.instantiate()
+        vc.isAmplify = true
+        present(vc, animated: true)
     }
 }

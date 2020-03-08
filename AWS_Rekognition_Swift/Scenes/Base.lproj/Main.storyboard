@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="80" width="97" height="30"/>
                                         <state key="normal" title="Amplify Demo"/>
                                         <connections>
-                                            <action selector="showPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wKh-3f-jpd"/>
+                                            <action selector="showJudgmentForAmplify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RhM-RO-wqS"/>
                                         </connections>
                                     </button>
                                 </subviews>

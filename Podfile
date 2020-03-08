@@ -8,7 +8,9 @@ target 'AWS_Rekognition_Swift' do
   pod 'AWSRekognition', '~> 2.12.2'
 
   pod 'Amplify'
+  pod 'AmplifyPlugins'
   pod 'AWSPluginsCore'
+  pod 'CoreMLPredictionsPlugin'
   pod 'AWSPredictionsPlugin'
   pod 'AWSMobileClient', '~> 2.12.2'
 

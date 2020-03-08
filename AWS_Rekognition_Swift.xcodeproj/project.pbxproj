@@ -21,6 +21,10 @@
 		84B313B524139FB000E6BB8F /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B313B424139FB000E6BB8F /* StoryboardInstantiatable.swift */; };
 		84B313B724139FDA00E6BB8F /* NibInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B313B624139FDA00E6BB8F /* NibInstantiatable.swift */; };
 		84B313B92413A00300E6BB8F /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B313B82413A00300E6BB8F /* ClassNameProtocol.swift */; };
+		84CC98F6241551B00077D2CF /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 84CC98F5241551AF0077D2CF /* amplifyconfiguration.json */; };
+		84CC98F82415537A0077D2CF /* donald_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84CC98F72415537A0077D2CF /* donald_0.jpg */; };
+		84CC98FC241557390077D2CF /* donald_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84CC98FB241557390077D2CF /* donald_1.jpg */; };
+		84CC98FE241557480077D2CF /* donald_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84CC98FD241557480077D2CF /* donald_2.jpg */; };
 		A8E487BEFD9B46E8E34AE4A3 /* Pods_AWS_Rekognition_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 599C2C3479A92B7AB7039F5E /* Pods_AWS_Rekognition_SwiftTests.framework */; };
 		B57943E6F8464B3A51CABA92 /* Pods_AWS_Rekognition_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C5C42BC76C05991974B0A1 /* Pods_AWS_Rekognition_Swift.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,10 @@
 		84B313B424139FB000E6BB8F /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		84B313B624139FDA00E6BB8F /* NibInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiatable.swift; sourceTree = "<group>"; };
 		84B313B82413A00300E6BB8F /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		84CC98F5241551AF0077D2CF /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		84CC98F72415537A0077D2CF /* donald_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = donald_0.jpg; path = AWS_Rekognition_Swift/Assets.xcassets/donald/donald_0.imageset/donald_0.jpg; sourceTree = "<group>"; };
+		84CC98FB241557390077D2CF /* donald_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = donald_1.jpg; path = AWS_Rekognition_Swift/Assets.xcassets/donald/donald_1.imageset/donald_1.jpg; sourceTree = "<group>"; };
+		84CC98FD241557480077D2CF /* donald_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = donald_2.jpg; path = AWS_Rekognition_Swift/Assets.xcassets/donald/donald_2.imageset/donald_2.jpg; sourceTree = "<group>"; };
 		B2C6ABC620CCF7DC3069B6E8 /* Pods-AWS_Rekognition_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWS_Rekognition_SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-AWS_Rekognition_SwiftTests/Pods-AWS_Rekognition_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD51F53FE64BD6F6B5E3F9A /* Pods-AWS_Rekognition_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWS_Rekognition_Swift.debug.xcconfig"; path = "Target Support Files/Pods-AWS_Rekognition_Swift/Pods-AWS_Rekognition_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +112,9 @@
 		843843952412A064005570EC = {
 			isa = PBXGroup;
 			children = (
+				84CC98FD241557480077D2CF /* donald_2.jpg */,
+				84CC98FB241557390077D2CF /* donald_1.jpg */,
+				84CC98F72415537A0077D2CF /* donald_0.jpg */,
 				843843A02412A064005570EC /* AWS_Rekognition_Swift */,
 				843843B72412A065005570EC /* AWS_Rekognition_SwiftTests */,
 				843843C22412A065005570EC /* AWS_Rekognition_SwiftUITests */,
@@ -130,6 +141,7 @@
 				84B313AB2413992500E6BB8F /* Scenes */,
 				843843A12412A064005570EC /* AppDelegate.swift */,
 				843843A32412A064005570EC /* SceneDelegate.swift */,
+				84CC98F5241551AF0077D2CF /* amplifyconfiguration.json */,
 				843843AA2412A065005570EC /* Assets.xcassets */,
 				843843AC2412A065005570EC /* LaunchScreen.storyboard */,
 				843843AF2412A065005570EC /* Info.plist */,
@@ -315,8 +327,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CC98FE241557480077D2CF /* donald_2.jpg in Resources */,
+				84CC98FC241557390077D2CF /* donald_1.jpg in Resources */,
+				84CC98F82415537A0077D2CF /* donald_0.jpg in Resources */,
 				84B313B024139A4400E6BB8F /* JudgmentViewController.storyboard in Resources */,
 				843843AE2412A065005570EC /* LaunchScreen.storyboard in Resources */,
+				84CC98F6241551B00077D2CF /* amplifyconfiguration.json in Resources */,
 				843843AB2412A065005570EC /* Assets.xcassets in Resources */,
 				843843A92412A064005570EC /* Main.storyboard in Resources */,
 			);
