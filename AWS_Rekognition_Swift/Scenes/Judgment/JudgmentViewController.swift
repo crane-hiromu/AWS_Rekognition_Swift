@@ -42,6 +42,7 @@ final class JudgmentViewController: UIViewController {
     @IBOutlet private weak var rightCenterBtn: UIButton!
     @IBOutlet private weak var rightBottomBtn: UIButton!
     
+    @IBOutlet private weak var logTextView: UITextView!
     
     // MARK: IBActions
     
@@ -75,9 +76,6 @@ final class JudgmentViewController: UIViewController {
         detectEntitiesByAmplify(with: "donald_2")
     }
     
-    
-    
-    @IBOutlet private weak var logTextView: UITextView!
     
     // MARK: Propeties
     
